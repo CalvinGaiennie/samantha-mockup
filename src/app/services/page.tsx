@@ -44,11 +44,11 @@ export default function ServicesPage() {
     <>
       <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-sm font-medium tracking-wide text-[#555555]">Services</p>
-          <h1 className="mt-2 max-w-lg text-3xl font-semibold text-[#161614] sm:text-4xl">
+          <p className="text-sm font-medium tracking-wide text-[#8a8a84]">Services</p>
+          <h1 className="mt-2 max-w-lg text-3xl font-semibold text-[#e8e8e4] sm:text-4xl">
             Here&rsquo;s what I can help with.
           </h1>
-          <p className="mt-4 max-w-lg text-[#555555]">
+          <p className="mt-4 max-w-lg text-[#8a8a84]">
             Every business is different. These are the areas I work in most, but if
             your situation doesn&rsquo;t fit neatly into a box, just reach out &mdash;
             we&rsquo;ll figure it out.
@@ -56,18 +56,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-t border-[#C1C1C1]/40 py-16 lg:py-20">
+      <section className="border-t border-white/5 py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, i) => (
+            {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm"
+                className="rounded-xl border border-white/5 bg-[#252523] p-6"
               >
-                <h2 className="text-lg font-semibold text-[#161614]">
+                <h2 className="text-lg font-semibold text-[#e8e8e4]">
                   {service.title}
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                <p className="mt-2 text-sm leading-relaxed text-[#a0a09a]">
                   {service.description}
                 </p>
               </div>
@@ -76,18 +76,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-t border-[#C1C1C1]/40 bg-[#FAFAFA] py-16">
+      <section className="border-t border-white/5 bg-[#242422] py-16">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-xl font-semibold text-[#161614]">
+          <h2 className="text-xl font-semibold text-[#e8e8e4]">
             Not sure which service you need?
           </h2>
-          <p className="mt-2 text-[#555555]">
+          <p className="mt-2 text-[#8a8a84]">
             That&rsquo;s fine. Most people aren&rsquo;t when they first reach out.
             Tell me what&rsquo;s going on and I&rsquo;ll point you in the right direction.
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-lg bg-[#161614] px-7 py-3.5 text-sm font-semibold text-[#FFFFFB] shadow-md hover:bg-black transition-colors"
+            className="mt-6 inline-block rounded-lg bg-[#EEFEAB] px-7 py-3.5 text-sm font-semibold text-[#1e1e1c] hover:brightness-95 transition"
           >
             Get in Touch
           </Link>

@@ -38,33 +38,33 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#161614] text-[#FFFFFB]">
+      <section className="relative overflow-hidden bg-[#1e1e1c]">
         <Image
           src="/assets/hero-bg.webp"
           alt=""
           fill
           priority
-          className="object-cover opacity-25"
+          className="object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#161614] via-[#161614]/70 to-[#161614]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1e1e1c] via-[#1e1e1c]/60 to-[#1e1e1c]/70" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 lg:grid-cols-5 lg:gap-16 lg:py-28">
           <div className="lg:col-span-3">
-            <h1 className="max-w-lg text-3xl font-semibold leading-snug sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+            <h1 className="max-w-lg text-3xl font-semibold leading-snug text-[#e8e8e4] sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
               Great systems don&rsquo;t happen by accident. They&rsquo;re built by people who&nbsp;care.
             </h1>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-[#D0D0D0]">
+            <p className="mt-5 max-w-md text-base leading-relaxed text-[#a0a09a]">
               I&rsquo;m Samantha Preston &mdash; 15 years of NetSuite consulting for
               businesses that are tired of systems that don&rsquo;t deliver.
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-block rounded-lg bg-[#EEFEAB] px-8 py-4 text-base font-semibold text-[#161614] shadow-md hover:brightness-95 transition"
+              className="mt-8 inline-block rounded-lg bg-[#EEFEAB] px-8 py-4 text-base font-semibold text-[#1e1e1c] hover:brightness-95 transition"
             >
               Work With Me
             </Link>
           </div>
           <div className="hidden lg:col-span-2 lg:block">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/5 shadow-2xl">
               <Image
                 src="/assets/samantha-portrait.webp"
                 alt="Samantha Preston"
@@ -80,21 +80,21 @@ export default function Home() {
       {/* Case Studies */}
       <section className="py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-semibold text-[#161614] sm:text-3xl">
+          <h2 className="text-2xl font-semibold text-[#e8e8e4] sm:text-3xl">
             What that looks like in practice
           </h2>
-          <p className="mt-2 text-[#555555]">
+          <p className="mt-2 text-[#8a8a84]">
             A few client outcomes. Names withheld, results real.
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {work.map((item, i) => (
+            {work.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm"
+                className="rounded-xl border border-white/5 bg-[#252523] p-6"
               >
-                <h3 className="font-semibold text-[#161614]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                <h3 className="font-semibold text-[#e8e8e4]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#a0a09a]">
                   {item.description}
                 </p>
               </div>
@@ -104,20 +104,20 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="border-t border-[#C1C1C1]/40 bg-[#FAFAFA] py-20 lg:py-24">
+      <section className="border-t border-white/5 bg-[#242422] py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-semibold text-[#161614] sm:text-3xl">
+          <h2 className="text-2xl font-semibold text-[#e8e8e4] sm:text-3xl">
             What I do
           </h2>
-          <p className="mt-2 text-[#555555]">
+          <p className="mt-2 text-[#8a8a84]">
             The three things most clients come to me for.
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {services.map((s) => (
-              <div key={s.title} className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm">
-                <h3 className="font-semibold text-[#161614]">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+              <div key={s.title} className="rounded-xl border border-white/5 bg-[#2a2a28] p-6">
+                <h3 className="font-semibold text-[#e8e8e4]">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#a0a09a]">
                   {s.description}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export default function Home() {
 
           <Link
             href="/services"
-            className="mt-10 inline-block rounded-lg bg-[#161614] px-8 py-4 text-base font-semibold text-[#FFFFFB] shadow-md hover:bg-black transition-colors"
+            className="mt-10 inline-block rounded-lg bg-[#EEFEAB] px-8 py-4 text-base font-semibold text-[#1e1e1c] hover:brightness-95 transition"
           >
             See All Services
           </Link>
