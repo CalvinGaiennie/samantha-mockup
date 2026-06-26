@@ -1,68 +1,49 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-100 bg-zinc-950 text-zinc-400">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="sm:col-span-2 lg:col-span-1">
-            <p className="text-lg font-bold text-white">
-              Preston<span className="text-accent-light">Consulting</span>
-            </p>
-            <p className="mt-3 text-sm leading-relaxed">
-              Your NetSuite Advocate. Over 15 years helping businesses unlock the full potential of their ERP systems.
+    <footer className="border-t border-[#C1C1C1]/40 bg-[#161614] text-[#999999]">
+      <div className="mx-auto max-w-6xl px-6 py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className="text-sm font-medium text-[#FFFFFB]">Preston Consulting</p>
+            <p className="mt-2 text-sm leading-relaxed">
+              Your NetSuite Advocate.
             </p>
           </div>
 
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-zinc-300">Navigate</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            <h4 className="mb-3 text-xs font-medium uppercase tracking-wider text-[#888888]">Pages</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/" className="hover:text-[#FFFFFB] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#FFFFFB] transition-colors">About</Link></li>
+              <li><Link href="/services" className="hover:text-[#FFFFFB] transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FFFFFB] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-zinc-300">Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li>NetSuite Implementation</li>
-              <li>ERP Optimization</li>
-              <li>Process Automation</li>
-              <li>Strategic Consulting</li>
+            <h4 className="mb-3 text-xs font-medium uppercase tracking-wider text-[#888888]">Services</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/services" className="hover:text-[#FFFFFB] transition-colors">Implementation</Link></li>
+              <li><Link href="/services" className="hover:text-[#FFFFFB] transition-colors">Optimization</Link></li>
+              <li><Link href="/services" className="hover:text-[#FFFFFB] transition-colors">Rescue &amp; Stabilization</Link></li>
+              <li><Link href="/services" className="hover:text-[#FFFFFB] transition-colors">Training</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-zinc-300">Connect</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                  <Image src="/assets/linkedin.svg" alt="" width={16} height={16} className="invert opacity-60" />
-                  LinkedIn
-                </a>
-              </li>
+            <h4 className="mb-3 text-xs font-medium uppercase tracking-wider text-[#888888]">Follow</h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><a href="#" className="hover:text-[#FFFFFB] transition-colors">Instagram</a></li>
+              <li><a href="#" className="hover:text-[#FFFFFB] transition-colors">YouTube</a></li>
+              <li><a href="#" className="hover:text-[#FFFFFB] transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 sm:flex-row">
-          <p className="text-xs">&copy; {new Date().getFullYear()} Preston Consulting. All rights reserved.</p>
-          <div className="flex gap-6 text-xs">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
+        <div className="mt-12 border-t border-white/10 pt-6">
+          <p className="text-xs text-[#999999]/60">&copy; {new Date().getFullYear()} Preston Consulting. All rights reserved.</p>
         </div>
       </div>
     </footer>

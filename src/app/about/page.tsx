@@ -4,119 +4,110 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Preston Consulting",
-  description: "Meet Samantha Preston and learn about 15+ years of NetSuite expertise.",
+  description: "Meet Samantha Preston. 15+ years of NetSuite consulting.",
 };
-
-const values = [
-  {
-    icon: "🎯",
-    title: "Client-Focused",
-    description: "Every recommendation is grounded in your business goals, not a one-size-fits-all playbook.",
-  },
-  {
-    icon: "⚙️",
-    title: "Deep Expertise",
-    description: "15+ years of hands-on NetSuite experience across industries — retail, SaaS, healthcare, and more.",
-  },
-  {
-    icon: "📈",
-    title: "Measurable Impact",
-    description: "We tie every project to KPIs so you can see the ROI in real numbers, not just promises.",
-  },
-  {
-    icon: "🤝",
-    title: "True Partnership",
-    description: "We work alongside your team, transferring knowledge so you're never dependent on outside help.",
-  },
-];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-zinc-50 to-white py-24">
+      <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-            About Us
-          </span>
-          <h1 className="mt-3 max-w-2xl text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
-            Meet Samantha Preston
+          <p className="text-sm font-medium tracking-wide text-[#555555]">About</p>
+          <h1 className="mt-2 max-w-lg text-3xl font-semibold text-[#161614] sm:text-4xl">
+            The short version: I fix NetSuite problems.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-500">
-            Known affectionately as the &ldquo;Godmother of NetSuite,&rdquo; Samantha founded
-            Preston Consulting with a clear vision: to be{" "}
-            <strong className="text-zinc-800">your NetSuite advocate</strong>.
-          </p>
         </div>
       </section>
 
-      {/* Bio */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2">
-          <div className="relative overflow-hidden rounded-2xl">
-            <Image
-              src="/assets/samantha-portrait.webp"
-              alt="Samantha Preston, Founder and Lead Consultant"
-              width={683}
-              height={1024}
-              className="h-full w-full object-cover"
-              priority
-            />
+      <section className="border-t border-[#C1C1C1]/40 py-16 lg:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-5 lg:gap-16">
+          <div className="flex flex-col justify-center lg:col-span-3">
+            <h2 className="text-xl font-semibold text-[#161614]">Samantha Preston</h2>
+            <p className="mt-1 text-sm text-[#555555]">Founder &amp; Lead Consultant</p>
+
+            <p className="mt-6 leading-relaxed text-[#555555]">
+              People call me the &ldquo;Godmother of NetSuite&rdquo; &mdash; mostly because
+              I&rsquo;ve been in this world for over 15 years and I&rsquo;ve seen just about
+              every way an implementation can go wrong. I started Preston Consulting because
+              too many businesses were getting sold systems they didn&rsquo;t understand by
+              people who wouldn&rsquo;t be around to help when things broke.
+            </p>
+            <p className="mt-4 leading-relaxed text-[#555555]">
+              My approach is simple: I figure out what your business actually needs, build
+              it properly, and make sure your team knows how to run it. No mystery, no
+              dependency on consultants forever. I want to work myself out of a job &mdash;
+              that&rsquo;s how you know it was done right.
+            </p>
+            <p className="mt-4 leading-relaxed text-[#555555]">
+              I&rsquo;ve done this for retail chains, SaaS companies, healthcare distributors,
+              and everything in between. If it runs on NetSuite, I can probably help.
+            </p>
           </div>
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-bold text-zinc-900">15+ Years of Hands-On ERP Experience</h2>
-            <p className="mt-4 leading-relaxed text-zinc-600">
-              Samantha brings a unique blend of deep technical expertise, innovative thinking,
-              and a passion for streamlining processes to every project she undertakes. Her
-              strategic insights, paired with a client-focused approach, guarantee that every
-              project is executed with precision and delivers measurable, impactful results.
-            </p>
-            <p className="mt-4 leading-relaxed text-zinc-600">
-              Whether you&rsquo;re looking to enhance your current NetSuite system or implement
-              it for the first time, Samantha and her dedicated team are here to guide you
-              every step of the way.
-            </p>
+          <div className="order-first lg:order-last lg:col-span-2">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-[#C1C1C1]/40 shadow-sm">
+              <Image
+                src="/assets/samantha-portrait.webp"
+                alt="Samantha Preston"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="bg-muted py-24">
+      <section className="border-t border-[#C1C1C1]/40 bg-[#FAFAFA] py-16 lg:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-14 text-center">
-            <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-              Our Values
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-900">
-              What Sets Us Apart
-            </h2>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <div key={v.title} className="rounded-2xl border border-zinc-200 bg-white p-8 text-center">
-                <span className="text-4xl">{v.icon}</span>
-                <h3 className="mt-4 text-lg font-bold text-zinc-900">{v.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{v.description}</p>
-              </div>
-            ))}
+          <h2 className="text-xl font-semibold text-[#161614]">How I work</h2>
+
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#161614]">Your goals come first</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                I don&rsquo;t have a playbook I force everyone through. We start with what
+                your business actually needs and build from there.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#161614]">I&rsquo;ve done this before</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                15 years across retail, SaaS, healthcare, distribution &mdash; I&rsquo;ve
+                seen the patterns and I know what works.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#161614]">You&rsquo;ll see the difference</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                I tie everything to real numbers. If we can&rsquo;t measure whether it worked,
+                we&rsquo;re not doing it right.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#C1C1C1]/40 bg-[#FFFFFB] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#161614]">Knowledge transfer, always</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#555555]">
+                I train your team as we go. The goal is for you to not need me anymore &mdash;
+                that&rsquo;s what good consulting looks like.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
+      <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
-            Let&rsquo;s Work Together
+          <h2 className="text-xl font-semibold text-[#161614]">
+            Think we&rsquo;d work well together?
           </h2>
-          <p className="mt-4 text-zinc-500">
-            Ready to unlock the full potential of your business with NetSuite?
+          <p className="mt-2 text-[#555555]">
+            I&rsquo;m always happy to talk through what you&rsquo;re dealing with,
+            even if we don&rsquo;t end up working together.
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-block rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 hover:bg-accent-dark transition-colors"
+            className="mt-6 inline-block rounded-lg bg-[#161614] px-7 py-3.5 text-sm font-semibold text-[#FFFFFB] shadow-md hover:bg-black transition-colors"
           >
-            Get in Touch
+            Contact Us
           </Link>
         </div>
       </section>
