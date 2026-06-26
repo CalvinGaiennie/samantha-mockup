@@ -50,7 +50,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 lg:grid-cols-5 lg:gap-16 lg:py-28">
           <div className="lg:col-span-3">
             <h1 className="max-w-lg text-3xl font-semibold leading-snug sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
-              Your NetSuite isn&rsquo;t working the way it should. I can fix&nbsp;that.
+              Great systems don&rsquo;t happen by accident. They&rsquo;re built by people who&nbsp;care.
             </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-[#D0D0D0]">
               I&rsquo;m Samantha Preston &mdash; 15 years of NetSuite consulting for
